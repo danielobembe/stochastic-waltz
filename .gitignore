@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+/conda-env/
+
+# Quarto
+/.quarto/
+/_site/
+
+# OS
+.DS_Store
+
+**/*.quarto_ipynb
