@@ -29,6 +29,14 @@ It describes what this project is, the full technical stack, and the current dev
 
 ---
 
+## Working Style
+
+- **Propose before acting** — before making any change (creating a file, editing code, running a command), describe what you plan to do and why, then wait for explicit confirmation before proceeding
+- **One action at a time** — describe and confirm each action individually; do not bundle multiple changes into a single step without prior agreement
+- **Confirm understanding** — if a request is ambiguous, restate your interpretation and ask for confirmation before doing anything
+
+---
+
 ## Current Phase
 
 Check the Project Brief (`options-blog-project-brief.md`) for the current development phase and status before starting any session.
