@@ -1,0 +1,9 @@
+---
+title: "Delta Hedging a Vanilla Option"
+date: "2026-06-18"
+categories: [greeks-hedging]
+description: "An introduction to delta hedging and how it eliminates first-order directional risk."
+image: thumbnail.png
+---
+
+An introduction to delta hedging and how it eliminates first-order directional risk.

@@ -8,37 +8,31 @@ project:
 website:
   title: "Stochastic Waltz"
   navbar:
-    left:
-      - text: "Posts"
-        href: index.qmd
-      - text: "Topics"
-        href: posts/foundations/index.qmd
+    right:
       - text: "About"
         href: about.qmd
-    right:
-      - icon: sun
-        id: quarto-color-mode-toggle
+      - icon: linkedin
+        href: https://www.linkedin.com/in/danielobembe/
+      - icon: github
+        href: https://github.com/danielobembe
+      - icon: search
+        id: quarto-search
+    toggle: true
   sidebar:
     style: "docked"
     contents:
       - section: "Foundations"
-        contents: posts/foundations
       - section: "Volatility Models"
-        contents: posts/volatility-models
       - section: "Pricing & Valuation"
-        contents: posts/pricing-valuation
       - section: "Greeks & Hedging"
-        contents: posts/greeks-hedging
       - section: "Numerical Methods"
-        contents: posts/numerical-methods
       - section: "Algorithmic Trading"
-        contents: posts/algorithmic-trading
 
 format:
   html:
     theme:
-      light: [cosmo, styles/styles.scss]
-      dark: [cosmo, styles/styles.scss]
+      light: [litera, styles/styles.scss]
+      dark: [litera, styles/styles.scss]
     toc: true
     toc-depth: 3
 

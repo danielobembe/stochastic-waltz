@@ -1,5 +1,0 @@
----
-title: "Greeks Hedging"
----
-
-Placeholder — posts in this section will appear here.

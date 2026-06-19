@@ -1,0 +1,9 @@
+---
+title: "Backtesting a Strategy"
+date: "2026-06-18"
+categories: [algorithmic-trading]
+description: "A quick intro to running backtests on algorithmic strategies."
+image: thumbnail.png
+---
+
+A quick intro to running backtests on algorithmic strategies.

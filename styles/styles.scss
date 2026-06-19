@@ -1,5 +1,168 @@
 /*-- scss:defaults --*/
 
-// Placeholder — full design implementation in Phase 2
-
 /*-- scss:rules --*/
+
+/* ── Color Palette ────────────────────────────────────────── */
+:root {
+  --sw-bg:           #ffffff;
+  --sw-surface:      #ffffff;
+  --sw-text:         #222832;
+  --sw-text-muted:   #6b7280;
+  --sw-border:       #e5e7eb;
+  --sw-accent:       #2563a8;
+  --sw-accent-hover: #1d4e89;
+  --sw-code-bg:      #f3f4f2;
+  --sw-tag-bg:       #eef2f7;
+}
+
+[data-bs-theme="dark"] {
+  --sw-bg:           #0f1117;
+  --sw-surface:      #1a1d27;
+  --sw-text:         #e8e8e6;
+  --sw-text-muted:   #9ca3af;
+  --sw-accent:       #5b9bd5;
+  --sw-code-bg:      #1e2130;
+}
+
+/* ── Typography ───────────────────────────────────────────── */
+body {
+  color: var(--sw-text);
+  background-color: var(--sw-bg);
+}
+
+h1 { font-size: 2rem;    font-weight: 600; }
+h2 { font-size: 1.5rem;  font-weight: 500; }
+h3 { font-size: 1.25rem; font-weight: 500; }
+
+code, pre { font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+code { font-size: 0.9rem; }
+pre  { font-size: 0.875rem; line-height: 1.6; }
+
+figcaption, .caption {
+  font-size: 0.875rem;
+  font-style: italic;
+  color: var(--sw-text-muted);
+}
+
+/* ── Navbar ───────────────────────────────────────────────── */
+.navbar {
+  border-bottom: 1px solid var(--sw-border);
+}
+
+.navbar-brand { font-weight: 600; }
+
+/* ── Sidebar ──────────────────────────────────────────────── */
+.sidebar-navigation .sidebar-item a {
+  color: var(--sw-text);
+  font-size: 0.9rem;
+}
+
+.sidebar-navigation .sidebar-item a:hover {
+  color: var(--sw-accent);
+  text-decoration: none;
+}
+
+.sidebar-navigation .sidebar-item.active a,
+.sidebar-navigation .sidebar-item .active {
+  color: var(--sw-accent);
+  border-left: 3px solid var(--sw-accent);
+  padding-left: 0.5rem;
+  font-weight: 500;
+}
+
+/* ── Post Cards ───────────────────────────────────────────── */
+.quarto-listing-default .list-group-item {
+  border: none;
+  border-bottom: 1px solid var(--sw-border);
+  border-radius: 0;
+  padding: 1.5rem 0;
+  background-color: transparent;
+}
+
+.quarto-listing-default .listing-date {
+  font-size: 0.75rem;
+  color: var(--sw-text-muted);
+}
+
+.quarto-listing-default .listing-title a {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--sw-text);
+  text-decoration: none;
+}
+
+.quarto-listing-default .listing-title a:hover { color: var(--sw-accent); }
+
+.quarto-listing-default .listing-description {
+  font-size: 0.9rem;
+  color: var(--sw-text-muted);
+  margin-top: 0.5rem;
+}
+
+.quarto-listing-default .listing-category {
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+  background-color: var(--sw-tag-bg) !important;
+  color: var(--sw-accent) !important;
+  border: none !important;
+  border-radius: 3px !important;
+  padding: 0.2rem 0.5rem !important;
+  margin-right: 0.25rem !important;
+  text-decoration: none !important;
+}
+
+.quarto-listing-default .listing-image {
+  width: 160px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 0;
+  flex-shrink: 0;
+}
+
+/* ── Code Blocks ──────────────────────────────────────────── */
+pre.sourceCode {
+  background-color: var(--sw-code-bg);
+  border: none;
+  border-radius: 4px;
+  padding: 1rem 1.25rem;
+}
+
+code:not(pre code) {
+  background-color: var(--sw-code-bg);
+  color: var(--sw-text);
+  padding: 0.15rem 0.35rem;
+  border-radius: 3px;
+}
+
+div.sourceCode .code-copy-button { opacity: 0; transition: opacity 0.2s; }
+div.sourceCode:hover .code-copy-button { opacity: 1; }
+
+/* ── Dark Mode Overrides ──────────────────────────────────── */
+
+[data-bs-theme="dark"] body {
+  background-color: var(--sw-bg) !important;
+  color: var(--sw-text) !important;
+}
+
+[data-bs-theme="dark"] .quarto-listing-default .list-group-item {
+  color: var(--sw-text) !important;
+}
+
+[data-bs-theme="dark"] .quarto-listing-default .listing-title a {
+  color: var(--sw-text) !important;
+}
+
+[data-bs-theme="dark"] .sidebar-nav-item,
+[data-bs-theme="dark"] #quarto-margin-sidebar {
+  background-color: var(--sw-surface) !important;
+}
+
+/* ── Equations ────────────────────────────────────────────── */
+.math.display {
+  display: block;
+  text-align: center;
+  padding: 1.5rem 0;
+  overflow-x: auto;
+}
+
+.math.inline { vertical-align: middle; }

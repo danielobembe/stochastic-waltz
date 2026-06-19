@@ -1,5 +1,0 @@
----
-title: "Numerical Methods"
----
-
-Placeholder — posts in this section will appear here.

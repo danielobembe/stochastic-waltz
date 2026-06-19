@@ -2,7 +2,7 @@
 ## An Options & Quantitative Finance Blog
 
 **Document type:** Design Brief  
-**Status:** Draft v1.0  
+**Status:** Updated v1.1 — revised after Phase 2 implementation  
 **Prepared:** June 2026
 
 ---
@@ -23,9 +23,11 @@ The governing principle is **restraint with purpose**. White space is not emptin
 
 | Site | What to borrow |
 |---|---|
-| [quantgirluk.github.io](https://quantgirluk.github.io/Understanding-Quantitative-Finance/intro.html) | Primary reference. Overall layout, light/dark toggle, per-page TOC, equation rendering, code block style, Jupyter Book aesthetic |
-| [distill.pub](https://distill.pub) | Interactive figures, margin annotations, article typography, the feeling that a page is a peer-reviewed artifact |
-| [dienhoa.github.io/dhblog](https://dienhoa.github.io/dhblog/) | Chronological post feed layout, post cards with thumbnail + tags + date + excerpt, right-side categories panel |
+| [dienhoa.github.io/dhblog](https://dienhoa.github.io/dhblog/) | **Primary visual reference.** Overall aesthetic, clean white layout, minimal navbar, chronological post feed, post card layout (date + title + category pills + thumbnail + excerpt), right-side categories panel. Built on Quarto `litera` theme. |
+| [quantgirluk.github.io](https://quantgirluk.github.io/Understanding-Quantitative-Finance/intro.html) | Left sidebar structure — section headers with individual posts nested beneath them, textbook-style hierarchy |
+| [distill.pub](https://distill.pub) | Interactive figures, article typography, the feeling that a page is a peer-reviewed artifact |
+
+> **Implementation note:** quantgirluk is built on Jupyter Book (PyData Sphinx Theme), not Quarto — direct replication is not possible. dhblog is a native Quarto blog and was adopted as the primary reference during Phase 2.
 
 ---
 
@@ -180,11 +182,12 @@ Dark mode is supported (Quarto handles the toggle). The dark mode palette should
 ### Top Navigation Bar
 Minimal. Contains:
 - Blog name / wordmark (left) — typeset in system font, weight 600, not a logo
-- Navigation links (right): `Posts`, `Topics`, `About` — three links maximum
-- Light/dark mode toggle (far right)
-- No search bar on initial launch; can be added later
+- Right side: `About` link, LinkedIn icon, GitHub icon, search icon, light/dark mode toggle
+- No Posts/Topics navigation links in the navbar — sidebar handles all topic navigation
 
 The top bar is thin, unobtrusive, and does not compete with content. No background fill — it sits directly on the page background color with a very faint bottom border.
+
+> **Dark mode status:** Dark mode toggle is present but deferred — full dark mode implementation requires resolving CSS specificity conflicts between the `litera` and `darkly` Quarto themes. Parked for a future session.
 
 ### Left Sidebar
 - Collapsible at section level
@@ -283,9 +286,9 @@ This brief is designed to be implemented in **Quarto**, the scientific publishin
 - Left sidebar navigation from `_quarto.yml`
 - Per-page table of contents
 
-**Recommended Quarto theme base:** Start from the `cosmo` or `flatly` Bootswatch theme and override with a custom `styles.scss` file that implements the palette, typography, and spacing defined in this brief. Do not use a dark theme base.
+**Quarto theme base:** `litera` (Bootswatch) — adopted during Phase 2 as the closest match to dhblog's clean white aesthetic. Overridden with `styles/styles.scss` for colors, typography, sidebar, and post card styles.
 
-**Fonts:** The site uses the system font stack by default, matching quantgirluk exactly. No Google Fonts imports are needed. Optionally, JetBrains Mono can be loaded from Google Fonts as a code font override if a more distinctive monospace style is desired.
+**Fonts:** System font stack — no external fonts loaded. `litera` provides this by default.
 
 **Interactive figures:** Use `plotly` (Python) or `plotly`/`htmlwidgets` (R) for interactive charts; they embed natively as self-contained HTML in Quarto output.
 

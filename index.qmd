@@ -1,5 +1,4 @@
 ---
-title: "Stochastic Waltz"
 listing:
   contents: posts
   sort: "date desc"

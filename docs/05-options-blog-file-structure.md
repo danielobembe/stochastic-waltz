@@ -28,7 +28,8 @@ stochastic-waltz/
 │   ├── 02-options-blog-design-brief.md
 │   ├── 03-options-blog-technical-spec.md
 │   ├── 04-options-blog-development-plan.md
-│   └── 05-options-blog-file-structure.md
+│   ├── 05-options-blog-file-structure.md
+│   └── 06-options-blog-status-tracking.md
 │
 ├── _quarto.yml                  # Master site configuration
 ├── index.qmd                    # Homepage — chronological post feed

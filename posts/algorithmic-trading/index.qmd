@@ -1,5 +1,0 @@
----
-title: "Algorithmic Trading"
----
-
-Placeholder — posts in this section will appear here.
