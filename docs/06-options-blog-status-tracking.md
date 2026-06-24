@@ -63,7 +63,34 @@ A running log of what was planned, what was actually built, decisions made, and 
 
 ## Phase 3 — Structure & Navigation
 
-**Status:** Not started
+**Status:** In progress  
+**Last updated:** June 2026
+
+### What was done
+
+- **Task 1 — Sidebar structure**: Explicit post contents wired into `_quarto.yml` for Foundations, Greeks & Hedging, and Algorithmic Trading sections; empty sections (Volatility Models, Pricing & Valuation, Numerical Methods) retain header-only entries as placeholders
+- **Task 2 — Homepage feed**: 5 posts rendering in reverse chronological order with thumbnails, category pills, and descriptions; categories panel visible on the right
+- **Task 3 — Categories panel**: Verified — clicking a category filters the feed
+- **Task 4 — Article layout**:
+  - All 5 posts updated with realistic body content distinct from their description
+  - Section headings added to each post, enabling right-side TOC (`toc: true`, `toc-depth: 3`)
+  - `reading-time: true` enabled in `_quarto.yml`
+  - Category pills on article pages styled to match homepage cards (`.quarto-category`)
+  - Collapsible revision history block added to all posts — `<details>` element with `--sw-code-bg` tinted background, preceded by a full-width `hr.revision-divider`
+  - Quarto's native BibTeX citation system added to all posts — one `references.bib` per post folder, `nocite: '@*'` to list all entries; styled References section (small, muted, uppercase label)
+
+### Decisions made
+
+- **References system**: Quarto native BibTeX (`bibliography: references.bib` per post) chosen over manual markdown lists — better suited to academic/quant finance content
+- **Revision history placement**: Below References, separated by `hr.revision-divider`
+- **HR divider**: Uses `margin-left: calc(-1 * var(--bs-gutter-x, 1.5rem))` for responsive full-width alignment with the sidebar border
+- **Reading time**: Will only display on posts with sufficient word count — not visible on current short placeholder posts; expected to appear naturally on real content
+
+### Outstanding items (Phase 3)
+
+- **Task 5**: About page — placeholder bio, photo, contact links
+- **Task 6**: 404 page — verify custom page renders correctly
+- Phase 3 wrap-up: final commit, mark complete in project brief
 
 ---
 
