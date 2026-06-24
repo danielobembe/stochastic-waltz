@@ -1,0 +1,39 @@
+---
+title: "Put-Call Parity"
+date: "2026-06-05"
+categories: [foundations, options]
+description: "Deriving the put-call parity relationship and exploring its implications for options pricing and arbitrage."
+bibliography: references.bib
+nocite: '@*'
+---
+
+Put-call parity is one of the most elegant results in options theory. It establishes a precise relationship between the prices of European calls and puts on the same underlying, with the same strike and expiration.
+
+## The Relationship
+
+For European options on a non-dividend-paying stock, put-call parity states:
+
+$$C - P = S_0 - K e^{-rT}$$
+
+where $C$ is the call price, $P$ is the put price, $S_0$ is the current stock price, $K$ is the strike, $r$ is the risk-free rate, and $T$ is the time to expiration.
+
+## Deriving it from No-Arbitrage
+
+The relationship follows directly from the no-arbitrage principle. Consider two portfolios: one holding a call and a bond, the other holding a put and the stock. Both portfolios have identical payoffs at expiration — so by no-arbitrage, they must have the same value today.
+
+## Implications
+
+Put-call parity is model-free — it holds regardless of how we model the underlying. This makes it a powerful tool for detecting mispricing and for synthesising positions synthetically.
+
+## References
+
+::: {#refs}
+:::
+
+<hr class="revision-divider">
+<details>
+<summary>Revision History</summary>
+
+- June 2026 — First published
+
+</details>

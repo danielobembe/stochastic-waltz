@@ -4,6 +4,37 @@ date: "2026-06-18"
 categories: [greeks-hedging]
 description: "An introduction to delta hedging and how it eliminates first-order directional risk."
 image: thumbnail.png
+bibliography: references.bib
+nocite: '@*'
 ---
 
-An introduction to delta hedging and how it eliminates first-order directional risk.
+Delta hedging is the most fundamental risk management technique in options trading. By continuously adjusting a position in the underlying, a trader can eliminate first-order exposure to price movements.
+
+## What is Delta?
+
+The delta $\Delta$ of an option measures the sensitivity of the option's price to a small change in the underlying asset price:
+
+$$\Delta = \frac{\partial V}{\partial S}$$
+
+For a European call under Black-Scholes, $\Delta = N(d_1)$, where $N(\cdot)$ is the standard normal CDF.
+
+## Constructing the Hedge
+
+To delta hedge a short call position, a trader buys $\Delta$ shares of the underlying. As $S$ moves, $\Delta$ changes — so the hedge must be rebalanced continuously (in theory) or at discrete intervals (in practice).
+
+## The Cost of Hedging
+
+Rebalancing is not free. The P&L of a delta-hedged position depends on the difference between realised volatility and implied volatility — a key insight that connects hedging to volatility trading.
+
+## References
+
+::: {#refs}
+:::
+
+<hr class="revision-divider">
+<details>
+<summary>Revision History</summary>
+
+- June 2026 — First published
+
+</details>

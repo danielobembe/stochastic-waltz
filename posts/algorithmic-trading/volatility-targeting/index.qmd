@@ -1,0 +1,39 @@
+---
+title: "Volatility Targeting"
+date: "2026-06-10"
+categories: [algorithmic-trading, volatility]
+description: "How volatility targeting strategies dynamically scale position sizes to maintain a constant level of portfolio risk."
+bibliography: references.bib
+nocite: '@*'
+---
+
+Volatility targeting is a position sizing technique that adjusts exposure inversely to realised volatility, keeping portfolio risk approximately constant through time.
+
+## The Core Idea
+
+Rather than holding a fixed number of shares or a fixed notional position, a volatility-targeted strategy scales its position so that the expected portfolio volatility equals a target level $\sigma^*$:
+
+$$w_t = \frac{\sigma^*}{\hat{\sigma}_t}$$
+
+where $\hat{\sigma}_t$ is an estimate of current volatility, typically a rolling standard deviation of recent returns.
+
+## Why It Works
+
+Volatility is mean-reverting and persistent. When markets are calm, vol targeting increases exposure; when markets are turbulent, it reduces it. This creates a natural mechanism for cutting risk during drawdowns — often before stop-losses would trigger.
+
+## Practical Considerations
+
+The choice of lookback window for $\hat{\sigma}_t$ matters significantly. Short windows are more responsive but noisier; long windows are more stable but lag regime changes. Transaction costs must also be weighed against the benefits of frequent rebalancing.
+
+## References
+
+::: {#refs}
+:::
+
+<hr class="revision-divider">
+<details>
+<summary>Revision History</summary>
+
+- June 2026 — First published
+
+</details>

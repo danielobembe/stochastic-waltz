@@ -4,6 +4,33 @@ date: "2026-06-18"
 categories: [algorithmic-trading]
 description: "A quick intro to running backtests on algorithmic strategies."
 image: thumbnail.png
+bibliography: references.bib
+nocite: '@*'
 ---
 
-A quick intro to running backtests on algorithmic strategies.
+Backtesting is the process of simulating a trading strategy on historical data to evaluate its performance. Done carefully, it provides a useful signal about whether a strategy has merit — done carelessly, it produces misleading results.
+
+## The Basic Setup
+
+A backtest requires three components: a **signal** (when to trade), a **sizing rule** (how much to trade), and a **cost model** (what execution costs). Getting all three right matters — an impressive backtest with no transaction costs tells you very little.
+
+## Common Pitfalls
+
+The most dangerous backtesting mistakes are look-ahead bias (using future information that wouldn't have been available at the time) and overfitting (tuning parameters until the in-sample performance looks good, at the expense of out-of-sample validity).
+
+## Evaluation Metrics
+
+Raw return is a poor measure of strategy quality. Better metrics include the Sharpe ratio, maximum drawdown, and the Calmar ratio — each capturing a different dimension of risk-adjusted performance.
+
+## References
+
+::: {#refs}
+:::
+
+<hr class="revision-divider">
+<details>
+<summary>Revision History</summary>
+
+- June 2026 — First published
+
+</details>

@@ -22,11 +22,19 @@ website:
     style: "docked"
     contents:
       - section: "Foundations"
+        contents:
+          - posts/foundations/intro-to-options/index.qmd
+          - posts/foundations/put-call-parity/index.qmd
       - section: "Volatility Models"
       - section: "Pricing & Valuation"
       - section: "Greeks & Hedging"
+        contents:
+          - posts/greeks-hedging/delta-hedging-vanilla-option/index.qmd
       - section: "Numerical Methods"
       - section: "Algorithmic Trading"
+        contents:
+          - posts/algorithmic-trading/backtesting-a-strategy/index.qmd
+          - posts/algorithmic-trading/volatility-targeting/index.qmd
 
 format:
   html:
@@ -35,6 +43,7 @@ format:
       dark: [litera, styles/styles.scss]
     toc: true
     toc-depth: 3
+    reading-time: true
 
 execute:
   freeze: auto

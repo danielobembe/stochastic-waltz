@@ -1,0 +1,40 @@
+---
+title: "Introduction to Options"
+date: "2026-06-01"
+categories: [foundations, options]
+description: "A primer on options contracts — what they are, how they work, and why they matter to quantitative finance."
+bibliography: references.bib
+nocite: '@*'
+---
+
+Options are among the most versatile instruments in modern finance. This post introduces the key concepts needed to understand how options work before we get into pricing theory.
+
+## What is an Option?
+
+An option is a financial derivative that gives the holder the right, but not the obligation, to buy or sell an underlying asset at a specified price on or before a given date. The price paid for this right is called the **premium**.
+
+## Calls and Puts
+
+There are two fundamental types of options:
+
+- A **call option** gives the holder the right to *buy* the underlying at the strike price
+- A **put option** gives the holder the right to *sell* the underlying at the strike price
+
+Each can be either bought (long) or sold (short), giving four basic positions.
+
+## Key Terminology
+
+Before diving into pricing, it helps to be precise about the core vocabulary: the **strike price** $K$, the **expiration date** $T$, the **underlying price** $S_t$, and the **risk-free rate** $r$. These four quantities appear in virtually every options model we will encounter.
+
+## References
+
+::: {#refs}
+:::
+
+<hr class="revision-divider">
+<details>
+<summary>Revision History</summary>
+
+- June 2026 — First published
+
+</details>
