@@ -7,6 +7,14 @@ project:
 
 website:
   title: "Stochastic Waltz"
+  site-url: https://danielobembe.github.io/stochastic-waltz
+  open-graph:
+    title: "Stochastic Waltz"
+    description: "A rigorous, open-access blog on options pricing, volatility modelling, and algorithmic trading."
+    image: /assets/og-default.png
+  page-footer:
+    left: "[RSS Feed](/index.xml)"
+    right: "This site uses [Plausible Analytics](https://plausible.io) — no cookies, no personal data collected."
   navbar:
     right:
       - text: "About"
