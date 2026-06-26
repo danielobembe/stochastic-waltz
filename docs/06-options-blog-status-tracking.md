@@ -61,10 +61,9 @@ A running log of what was planned, what was actually built, decisions made, and 
 
 ---
 
-## Phase 3 — Structure & Navigation
+## Phase 3 — Structure & Navigation ✅
 
-**Status:** In progress  
-**Last updated:** June 2026
+**Completed:** 25 June 2026
 
 ### What was done
 
@@ -86,11 +85,21 @@ A running log of what was planned, what was actually built, decisions made, and 
 - **HR divider**: Uses `margin-left: calc(-1 * var(--bs-gutter-x, 1.5rem))` for responsive full-width alignment with the sidebar border
 - **Reading time**: Will only display on posts with sufficient word count — not visible on current short placeholder posts; expected to appear naturally on real content
 
-### Outstanding items (Phase 3)
+- **Task 5 — About page**: Implemented using Quarto's `jolla` about page template — circular photo centered at top, bio below, LinkedIn and GitHub pill buttons at bottom; bio text overridden to left-align via `.quarto-about-jolla main p` CSS; `sidebar: false` set to suppress left nav on this page
+- **Task 6 — 404 page**: Verified — renders cleanly with a clear message and link back to homepage; no changes needed
 
-- **Task 5**: About page — placeholder bio, photo, contact links
-- **Task 6**: 404 page — verify custom page renders correctly
-- Phase 3 wrap-up: final commit, mark complete in project brief
+### Decisions made
+
+- **About page layout**: Changed from Design Brief's original "photo left-aligned with text wrapping" to dhblog-style centered layout (photo centered, bio centered below); Design Brief updated to reflect this
+- **About page photo**: Using cartoon illustration (`profile_with_lola.png`) — photo of author and cat; `assets/` folder created to house profile photos
+- **About page template**: Quarto `jolla` template chosen for the centered photo/bio layout
+- **404 page**: Kept minimal — title + one-line message + homepage link; consistent with blog's restraint principle
+- **`site-url` warning**: Pre-existing warning about missing `site-url` for RSS feed — harmless for now, to be resolved in Phase 4 when site URL is configured
+
+### Outstanding items carried forward
+
+- **Dark mode**: Still deferred from Phase 2 — toggle present but non-functional
+- **`site-url`**: To be added in Phase 4 when configuring RSS and analytics
 
 ---
 

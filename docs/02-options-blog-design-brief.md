@@ -256,12 +256,13 @@ Each entry in the chronological feed:
 
 ## 10. About Page
 
-A standalone page, not part of the textbook hierarchy.
+A standalone page, not part of the textbook hierarchy. Modeled on dhblog's About page layout.
 
-- Photo: circular crop, medium size, left-aligned with text wrapping or stacked above on mobile
-- Short bio: 2–3 paragraphs — background, motivation for the blog, areas of focus
+- Photo: circular crop, medium size, centered above the bio
+- Title ("About") centered below the photo
+- Short bio: 2–3 paragraphs centered below the title — background, motivation for the blog, areas of focus
 - No testimonials, no "hire me" language, no social proof widgets
-- Links to LinkedIn, GitHub, or similar — plain text links, not icon buttons
+- Links to LinkedIn and GitHub below the bio — rendered as small pill buttons (matching dhblog)
 - The tone should match the blog: precise, unpretentious, technically confident
 
 ---

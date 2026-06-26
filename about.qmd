@@ -1,5 +1,21 @@
 ---
 title: "About"
+sidebar: false
+about:
+  template: jolla
+  image: assets/profile_with_lola.png
+  image-shape: round
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/danielobembe/
+    - icon: github
+      text: GitHub
+      href: https://github.com/danielobembe
 ---
 
-Placeholder — bio, photo, and contact links to be added in Phase 3.
+I'm Daniel Obembe, a quantitative finance practitioner with a focus on derivatives pricing, volatility modelling, and systematic trading strategies.
+
+This blog is a working record of ideas I find worth writing down carefully. The posts are meant to be rigorous without being impenetrable — the kind of writing I wished existed when I was first learning these topics. Each post is part reference material, part worked example, and part thinking out loud.
+
+The areas I return to most often are options theory, stochastic volatility, and the intersection of statistical inference with trading. Expect equations, code, and occasional digressions into market structure.
