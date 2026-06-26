@@ -105,7 +105,27 @@ A running log of what was planned, what was actually built, decisions made, and 
 
 ## Phase 4 — Third-Party Integrations
 
-**Status:** Not started
+**Status:** In progress  
+**Last updated:** 25 June 2026
+
+### What was done
+
+- **Task 4 (RSS Feed)**: `site-url` added to `_quarto.yml` (resolves the pre-existing feed warning); feed configured with 20 items, full type; RSS link added to site footer (bottom-left)
+- **Task 6 (Open Graph / SEO)**: `open-graph` block added to `_quarto.yml` with site title, description, and default image; `assets/og-default.png` generated — stochastic GBM paths on dark background with $P_t$ / $t$ axes
+- **Task 7 (Privacy notice)**: One-line notice added to site footer (bottom-right): "This site uses Plausible Analytics — no cookies, no personal data collected."
+- **About page updates**: Title changed to "About me"; author name updated to "Ayo"
+
+### Decisions made
+
+- **OG image**: Stochastic GBM paths on dark background (`#0f1117`) chosen over plain text card — more visually distinctive for social sharing; three-layer path rendering (background, mid, hero) for depth; no text overlay (platform displays title/description from meta tags automatically)
+- **Privacy notice**: Added as footer text now, even though Plausible is not yet active — notice is accurate once Plausible is configured
+
+### Outstanding items (Phase 4)
+
+- **Task 1 — Plausible Analytics**: Requires account creation at plausible.io and site domain registration to get tracking script
+- **Task 2 — visitorbadge.io**: Requires registering homepage URL at visitorbadge.io
+- **Task 3 — Giscus comments**: Requires enabling GitHub Discussions on the repo and installing Giscus GitHub App
+- **Task 5 — Buttondown email subscriptions**: Requires account creation at buttondown.com
 
 ---
 
