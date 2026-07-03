@@ -173,15 +173,17 @@ The plan is written to be handed directly to Claude Code. Where decisions have a
 
 ### Tasks
 
-1. **Plausible Analytics**
+1. **Plausible Analytics** ⚠️ *Deferred to post-Phase 6 — requires live site URL*
    - Create account at plausible.io and add the site domain
    - Embed the Plausible script tag in `_quarto.yml` under `include-in-header`
    - Verify pageview events appear in the Plausible dashboard after a test visit
+   - *Note: the tracking script is domain-specific — complete this after the site is deployed and the live URL is confirmed*
 
-2. **visitorbadge.io**
+2. **visitorbadge.io** ⚠️ *Deferred to post-Phase 6 — requires live site URL*
    - Register the homepage URL at visitorbadge.io
    - Embed the generated badge on the homepage
    - Customize badge colors to match the site palette (muted, no red/pink)
+   - *Note: the badge is tied to a specific page URL — complete this after deployment*
 
 3. **Giscus comments**
    - Enable GitHub Discussions on the repository
@@ -273,9 +275,10 @@ The plan is written to be handed directly to Claude Code. Where decisions have a
    - [ ] All images have `alt` text
    - [ ] Open Graph tags verified for homepage and both posts
    - [ ] RSS feed validates at `/index.xml`
-   - [ ] Plausible tracking confirmed live
    - [ ] Giscus comments confirmed working
    - [ ] Buttondown subscription confirmed working
+   - [ ] Plausible tracking confirmed live (set up after deployment)
+   - [ ] visitorbadge.io badge confirmed live (set up after deployment)
    - [ ] Site renders correctly at all three breakpoints
    - [ ] Light and dark modes both confirmed
 
@@ -286,7 +289,11 @@ The plan is written to be handed directly to Claude Code. Where decisions have a
    - Verify the live site at `https://<username>.github.io/<repository-name>/`
    - Confirm all pages, assets, and integrations work on the live URL (not just locally)
 
-3. **Submit to Quantocracy**
+3. **Set up domain-dependent integrations**
+   - **Plausible Analytics**: create account at plausible.io, register the confirmed live URL, embed the script tag in `_quarto.yml`
+   - **visitorbadge.io**: register the live homepage URL, embed the generated badge on the homepage
+
+4. **Submit to Quantocracy**
    - Submit the blog URL at [quantocracy.com/submit](https://quantocracy.com/submit)
    - Quantocracy is the primary aggregator for quant finance content; inclusion here is the single highest-value distribution action at launch
 
