@@ -57,7 +57,7 @@ Supporting documents — read in this order after this brief:
 | Phase 2 | Design Implementation | Complete |
 | Phase 3 | Structure & Navigation | Complete |
 | Phase 4 | Third-Party Integrations | In progress |
-| Phase 5 | Deploy to GitHub Pages | Not started |
+| Phase 5 | Deploy to GitHub Pages | In progress |
 | Phase 6 | First Content | Not started |
 | Phase 7 | Launch | Not started |
 

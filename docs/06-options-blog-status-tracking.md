@@ -136,7 +136,23 @@ A running log of what was planned, what was actually built, decisions made, and 
 
 ## Phase 5 — Deploy to GitHub Pages
 
-**Status:** Not started
+**Status:** In progress  
+**Last updated:** 3 July 2026
+
+### What was done
+
+- **Task 1 (Publish to GitHub Pages)**: `gh-pages` branch did not exist on the remote, causing `quarto publish gh-pages` to fail with a misleading "initialize the remote repository" error even after the first attempt. Fixed by manually creating an empty orphan `gh-pages` branch and pushing it, then re-running the publish command, which succeeded
+- Site confirmed live at `https://danielobembe.github.io/stochastic-waltz`
+- **Sidebar hover bug found and fixed post-deploy**: empty sidebar sections (no subpages, e.g. "Volatility Models") render as a plain `<span class="sidebar-item-text">` rather than an `<a>` tag, so the existing `.sidebar-item a:hover` CSS rule never applied to them — they didn't turn blue on hover like sections with subpages. Fixed by broadening the selector to `.sidebar-item-text:hover`, which covers both `<a>` and `<span>` elements. Re-published to `gh-pages` after the fix
+
+### Decisions made
+
+- **First-publish fix**: Manually creating an orphan `gh-pages` branch is a one-time workaround for this Quarto version's first-publish behavior when the branch doesn't already exist remotely — not needed for subsequent publishes
+
+### Outstanding items (Phase 5)
+
+- **Task 2 — Plausible Analytics**: Not yet started — requires plausible.io account creation
+- **Task 3 — visitorbadge.io**: Not yet started — requires visitorbadge.io registration
 
 ---
 
