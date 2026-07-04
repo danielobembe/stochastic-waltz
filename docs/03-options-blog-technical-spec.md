@@ -180,9 +180,11 @@ A simple, unobtrusive email subscription option — readers can opt in to receiv
 Key properties:
 - Free tier supports up to 100 subscribers; paid tier starts at ~$9/month
 - Clean, minimal interface with no engagement-bait features
-- Supports RSS-to-email (automatically sends new posts to subscribers)
+- RSS-to-email (automatically sends new posts to subscribers) requires the **Basic plan** (~$9/month) — **not available on the Free plan**
 - No tracking pixels by default (aligns with the privacy-respecting analytics approach)
 - Simple API for embedding a subscription form
+
+> **Current tier:** Free. Subscriber emails are captured via the footer form, but new posts must be sent to subscribers manually until upgrading to Basic. See `docs/07-options-blog-future-upgrades.md` for the upgrade trigger condition.
 
 ### Implementation
 A minimal single-field form (email address only, no name field) embedded as a small block in the footer. No popup, no modal, no sticky banner. Suggested copy: *"New posts by email — no spam, unsubscribe anytime."*

@@ -106,7 +106,7 @@ A running log of what was planned, what was actually built, decisions made, and 
 ## Phase 4 — Third-Party Integrations
 
 **Status:** In progress  
-**Last updated:** 25 June 2026
+**Last updated:** 3 July 2026
 
 ### What was done
 
@@ -114,18 +114,20 @@ A running log of what was planned, what was actually built, decisions made, and 
 - **Task 6 (Open Graph / SEO)**: `open-graph` block added to `_quarto.yml` with site title, description, and default image; `assets/og-default.png` generated — stochastic GBM paths on dark background with $P_t$ / $t$ axes
 - **Task 7 (Privacy notice)**: One-line notice added to site footer (bottom-right): "This site uses Plausible Analytics — no cookies, no personal data collected."
 - **About page updates**: Title changed to "About me"; author name updated to "Ayo"
+- **Task 3 (Giscus comments)**: GitHub Discussions enabled on the repo; Giscus GitHub App installed; comment widget configured with `mapping: pathname`, `category: Announcements` (restricts new thread creation to the maintainer, preventing spam). Implemented via Quarto's native `comments.giscus` key in `posts/_metadata.yml` — first attempt used `include-after-body` script injection, which rendered outside the page grid (misaligned, appeared below the footer); corrected to use Quarto's native support, which places the widget correctly inside the article content area, above the footer
+- **Task 5 (Buttondown email subscriptions)**: Account created (`ayo.obembe`); subscription form embedded in site footer (center) — email field + Subscribe button, styled with darker input border and accent-colored button for visibility; caption reads "New posts by email — no spam, unsubscribe anytime."
 
 ### Decisions made
 
 - **OG image**: Stochastic GBM paths on dark background (`#0f1117`) chosen over plain text card — more visually distinctive for social sharing; three-layer path rendering (background, mid, hero) for depth; no text overlay (platform displays title/description from meta tags automatically)
 - **Privacy notice**: Added as footer text now, even though Plausible is not yet active — notice is accurate once Plausible is configured
+- **Giscus category**: `Announcements` chosen over `General` — only the maintainer can open new discussion threads, which maps naturally to "one thread per post" and prevents off-topic spam threads
+- **Buttondown plan**: Staying on the **Free plan** for now rather than upgrading to Basic (~$9/month) for RSS-to-email. New posts will be sent to subscribers manually until subscriber count justifies the upgrade. Tracked in new `docs/07-options-blog-future-upgrades.md`; Technical Spec Section 8 updated to reflect the Free-tier limitation
 
 ### Outstanding items (Phase 4)
 
-- **Task 1 — Plausible Analytics**: Requires account creation at plausible.io and site domain registration to get tracking script
-- **Task 2 — visitorbadge.io**: Requires registering homepage URL at visitorbadge.io
-- **Task 3 — Giscus comments**: Requires enabling GitHub Discussions on the repo and installing Giscus GitHub App
-- **Task 5 — Buttondown email subscriptions**: Requires account creation at buttondown.com
+- **Task 1 — Plausible Analytics**: Deferred to post-Phase 6 — requires the live site URL, which is only confirmed after deployment
+- **Task 2 — visitorbadge.io**: Deferred to post-Phase 6 — same reason as above
 
 ---
 

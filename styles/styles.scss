@@ -248,3 +248,42 @@ div#refs {
   color: var(--sw-text-muted);
   line-height: 1.6;
 }
+
+/* ── Footer Subscription Form ───────────────────────────────── */
+.subscribe-form {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.subscribe-form input[type="email"] {
+  font-size: 0.875rem;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--sw-text-muted);
+  border-radius: 3px;
+  background-color: var(--sw-bg);
+  color: var(--sw-text);
+  width: 190px;
+}
+
+.subscribe-form input[type="submit"] {
+  font-size: 0.875rem;
+  padding: 0.3rem 0.75rem;
+  border: 1px solid var(--sw-accent);
+  border-radius: 3px;
+  background-color: var(--sw-accent);
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.subscribe-form input[type="submit"]:hover {
+  background-color: var(--sw-accent-hover);
+  border-color: var(--sw-accent-hover);
+}
+
+.subscribe-caption {
+  font-size: 0.7rem;
+  color: var(--sw-text-muted);
+  text-align: center;
+  margin-top: 0.35rem;
+}

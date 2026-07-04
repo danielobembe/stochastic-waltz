@@ -29,7 +29,8 @@ stochastic-waltz/
 │   ├── 03-options-blog-technical-spec.md
 │   ├── 04-options-blog-development-plan.md
 │   ├── 05-options-blog-file-structure.md
-│   └── 06-options-blog-status-tracking.md
+│   ├── 06-options-blog-status-tracking.md
+│   └── 07-options-blog-future-upgrades.md
 │
 ├── _quarto.yml                  # Master site configuration
 ├── index.qmd                    # Homepage — chronological post feed
@@ -39,6 +40,7 @@ stochastic-waltz/
 ├── .gitignore                   # Git ignore rules
 │
 ├── posts/                       # All blog posts, organized by topic
+│   ├── _metadata.yml            # Shared settings for all posts (e.g. Giscus comments embed)
 │   ├── foundations/
 │   ├── volatility-models/
 │   ├── pricing-valuation/

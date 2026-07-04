@@ -1,0 +1,10 @@
+comments:
+  giscus:
+    repo: danielobembe/stochastic-waltz
+    repo-id: R_kgDOS80Rag
+    category: Announcements
+    category-id: DIC_kwDOS80Ras4DAc9A
+    mapping: pathname
+    reactions-enabled: true
+    input-position: bottom
+    theme: preferred_color_scheme

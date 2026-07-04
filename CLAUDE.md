@@ -15,6 +15,7 @@ It describes what this project is, the full technical stack, and the current dev
 3. **`docs/04-options-blog-development-plan.md`**
 4. **`docs/05-options-blog-file-structure.md`**
 5. **`docs/06-options-blog-status-tracking.md`**
+6. **`docs/07-options-blog-future-upgrades.md`**
 
 ---
 

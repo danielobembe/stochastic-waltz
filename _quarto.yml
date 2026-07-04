@@ -14,6 +14,12 @@ website:
     image: /assets/og-default.png
   page-footer:
     left: "[RSS Feed](/index.xml)"
+    center: |
+      <form action="https://buttondown.com/api/emails/embed-subscribe/ayo.obembe" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/ayo.obembe', 'popupwindow')" class="subscribe-form">
+        <input type="email" name="email" id="bd-email" placeholder="you@example.com" required>
+        <input type="submit" value="Subscribe">
+      </form>
+      <div class="subscribe-caption">New posts by email — no spam, unsubscribe anytime.</div>
     right: "This site uses [Plausible Analytics](https://plausible.io) — no cookies, no personal data collected."
   navbar:
     right:
