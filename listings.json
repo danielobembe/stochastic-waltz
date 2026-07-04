@@ -1,0 +1,12 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/algorithmic-trading/backtesting-a-strategy/index.html",
+      "/posts/greeks-hedging/delta-hedging-vanilla-option/index.html",
+      "/posts/algorithmic-trading/volatility-targeting/index.html",
+      "/posts/foundations/put-call-parity/index.html",
+      "/posts/foundations/intro-to-options/index.html"
+    ]
+  }
+]

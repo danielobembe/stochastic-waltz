@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Stochastic Waltz</title>
+<link>https://danielobembe.github.io/stochastic-waltz/</link>
+<atom:link href="https://danielobembe.github.io/stochastic-waltz/index.xml" rel="self" type="application/rss+xml"/>
+<description></description>
+<generator>quarto-1.9.38</generator>
+<lastBuildDate>Thu, 18 Jun 2026 05:00:00 GMT</lastBuildDate>
+<item>
+  <title>Backtesting a Strategy</title>
+  <link>https://danielobembe.github.io/stochastic-waltz/posts/algorithmic-trading/backtesting-a-strategy/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Backtesting is the process of simulating a trading strategy on historical data to evaluate its performance. Done carefully, it provides a useful signal about whether a strategy has merit — done carelessly, it produces misleading results.</p>
+<section id="the-basic-setup" class="level2">
+<h2 class="anchored" data-anchor-id="the-basic-setup">The Basic Setup</h2>
+<p>A backtest requires three components: a <strong>signal</strong> (when to trade), a <strong>sizing rule</strong> (how much to trade), and a <strong>cost model</strong> (what execution costs). Getting all three right matters — an impressive backtest with no transaction costs tells you very little.</p>
+</section>
+<section id="common-pitfalls" class="level2">
+<h2 class="anchored" data-anchor-id="common-pitfalls">Common Pitfalls</h2>
+<p>The most dangerous backtesting mistakes are look-ahead bias (using future information that wouldn’t have been available at the time) and overfitting (tuning parameters until the in-sample performance looks good, at the expense of out-of-sample validity).</p>
+</section>
+<section id="evaluation-metrics" class="level2">
+<h2 class="anchored" data-anchor-id="evaluation-metrics">Evaluation Metrics</h2>
+<p>Raw return is a poor measure of strategy quality. Better metrics include the Sharpe ratio, maximum drawdown, and the Calmar ratio — each capturing a different dimension of risk-adjusted performance.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-bailey2014" class="csl-entry">
+Bailey, David H., Jonathan Borwein, Marcos Lopez de Prado, and Qiji Jim Zhu. 2014. <span>“Pseudo-Mathematics and Financial Charlatanism: The Effects of Backtest Overfitting on Out-of-Sample Performance.”</span> <em>Notices of the American Mathematical Society</em> 61 (5): 458–71.
+</div>
+<div id="ref-sharpe1966" class="csl-entry">
+Sharpe, William F. 1966. <span>“Mutual Fund Performance.”</span> <em>Journal of Business</em> 39 (1): 119–38.
+</div>
+</div>
+<hr class="revision-divider">
+<details>
+<summary>
+Revision History
+</summary>
+<ul>
+<li>June 2026 — First published</li>
+</ul>
+</details>
+
+
+</section>
+
+ ]]></description>
+  <category>algorithmic-trading</category>
+  <guid>https://danielobembe.github.io/stochastic-waltz/posts/algorithmic-trading/backtesting-a-strategy/</guid>
+  <pubDate>Thu, 18 Jun 2026 05:00:00 GMT</pubDate>
+  <media:content url="https://danielobembe.github.io/stochastic-waltz/posts/algorithmic-trading/backtesting-a-strategy/thumbnail.png" medium="image" type="image/png" height="89" width="144"/>
+</item>
+<item>
+  <title>Delta Hedging a Vanilla Option</title>
+  <link>https://danielobembe.github.io/stochastic-waltz/posts/greeks-hedging/delta-hedging-vanilla-option/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Delta hedging is the most fundamental risk management technique in options trading. By continuously adjusting a position in the underlying, a trader can eliminate first-order exposure to price movements.</p>
+<section id="what-is-delta" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-delta">What is Delta?</h2>
+<p>The delta <img src="https://latex.codecogs.com/png.latex?%5CDelta"> of an option measures the sensitivity of the option’s price to a small change in the underlying asset price:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5CDelta%20=%20%5Cfrac%7B%5Cpartial%20V%7D%7B%5Cpartial%20S%7D"></p>
+<p>For a European call under Black-Scholes, <img src="https://latex.codecogs.com/png.latex?%5CDelta%20=%20N(d_1)">, where <img src="https://latex.codecogs.com/png.latex?N(%5Ccdot)"> is the standard normal CDF.</p>
+</section>
+<section id="constructing-the-hedge" class="level2">
+<h2 class="anchored" data-anchor-id="constructing-the-hedge">Constructing the Hedge</h2>
+<p>To delta hedge a short call position, a trader buys <img src="https://latex.codecogs.com/png.latex?%5CDelta"> shares of the underlying. As <img src="https://latex.codecogs.com/png.latex?S"> moves, <img src="https://latex.codecogs.com/png.latex?%5CDelta"> changes — so the hedge must be rebalanced continuously (in theory) or at discrete intervals (in practice).</p>
+</section>
+<section id="the-cost-of-hedging" class="level2">
+<h2 class="anchored" data-anchor-id="the-cost-of-hedging">The Cost of Hedging</h2>
+<p>Rebalancing is not free. The P&amp;L of a delta-hedged position depends on the difference between realised volatility and implied volatility — a key insight that connects hedging to volatility trading.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-black1973" class="csl-entry">
+Black, Fischer, and Myron Scholes. 1973. <span>“The Pricing of Options and Corporate Liabilities.”</span> <em>Journal of Political Economy</em> 81 (3): 637–54.
+</div>
+<div id="ref-hull2018" class="csl-entry">
+Hull, John C. 2018. <em>Options, Futures, and Other Derivatives</em>. 10th ed. Pearson.
+</div>
+</div>
+<hr class="revision-divider">
+<details>
+<summary>
+Revision History
+</summary>
+<ul>
+<li>June 2026 — First published</li>
+</ul>
+</details>
+
+
+</section>
+
+ ]]></description>
+  <category>greeks-hedging</category>
+  <guid>https://danielobembe.github.io/stochastic-waltz/posts/greeks-hedging/delta-hedging-vanilla-option/</guid>
+  <pubDate>Thu, 18 Jun 2026 05:00:00 GMT</pubDate>
+  <media:content url="https://danielobembe.github.io/stochastic-waltz/posts/greeks-hedging/delta-hedging-vanilla-option/thumbnail.png" medium="image" type="image/png" height="89" width="144"/>
+</item>
+<item>
+  <title>Volatility Targeting</title>
+  <link>https://danielobembe.github.io/stochastic-waltz/posts/algorithmic-trading/volatility-targeting/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Volatility targeting is a position sizing technique that adjusts exposure inversely to realised volatility, keeping portfolio risk approximately constant through time.</p>
+<section id="the-core-idea" class="level2">
+<h2 class="anchored" data-anchor-id="the-core-idea">The Core Idea</h2>
+<p>Rather than holding a fixed number of shares or a fixed notional position, a volatility-targeted strategy scales its position so that the expected portfolio volatility equals a target level <img src="https://latex.codecogs.com/png.latex?%5Csigma%5E*">:</p>
+<p><img src="https://latex.codecogs.com/png.latex?w_t%20=%20%5Cfrac%7B%5Csigma%5E*%7D%7B%5Chat%7B%5Csigma%7D_t%7D"></p>
+<p>where <img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Csigma%7D_t"> is an estimate of current volatility, typically a rolling standard deviation of recent returns.</p>
+</section>
+<section id="why-it-works" class="level2">
+<h2 class="anchored" data-anchor-id="why-it-works">Why It Works</h2>
+<p>Volatility is mean-reverting and persistent. When markets are calm, vol targeting increases exposure; when markets are turbulent, it reduces it. This creates a natural mechanism for cutting risk during drawdowns — often before stop-losses would trigger.</p>
+</section>
+<section id="practical-considerations" class="level2">
+<h2 class="anchored" data-anchor-id="practical-considerations">Practical Considerations</h2>
+<p>The choice of lookback window for <img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Csigma%7D_t"> matters significantly. Short windows are more responsive but noisier; long windows are more stable but lag regime changes. Transaction costs must also be weighed against the benefits of frequent rebalancing.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-hurst2013" class="csl-entry">
+Hurst, Brian, Yao Hua Ooi, and Lasse Heje Pedersen. 2013. <span>“Demystifying Managed Futures.”</span> <em>Journal of Investment Management</em> 11 (3): 42–58.
+</div>
+<div id="ref-moreira2017" class="csl-entry">
+Moreira, Alan, and Tyler Muir. 2017. <span>“Volatility-Managed Portfolios.”</span> <em>Journal of Finance</em> 72 (4): 1611–44.
+</div>
+</div>
+<hr class="revision-divider">
+<details>
+<summary>
+Revision History
+</summary>
+<ul>
+<li>June 2026 — First published</li>
+</ul>
+</details>
+
+
+</section>
+
+ ]]></description>
+  <category>algorithmic-trading</category>
+  <category>volatility</category>
+  <guid>https://danielobembe.github.io/stochastic-waltz/posts/algorithmic-trading/volatility-targeting/</guid>
+  <pubDate>Wed, 10 Jun 2026 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Put-Call Parity</title>
+  <link>https://danielobembe.github.io/stochastic-waltz/posts/foundations/put-call-parity/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Put-call parity is one of the most elegant results in options theory. It establishes a precise relationship between the prices of European calls and puts on the same underlying, with the same strike and expiration.</p>
+<section id="the-relationship" class="level2">
+<h2 class="anchored" data-anchor-id="the-relationship">The Relationship</h2>
+<p>For European options on a non-dividend-paying stock, put-call parity states:</p>
+<p><img src="https://latex.codecogs.com/png.latex?C%20-%20P%20=%20S_0%20-%20K%20e%5E%7B-rT%7D"></p>
+<p>where <img src="https://latex.codecogs.com/png.latex?C"> is the call price, <img src="https://latex.codecogs.com/png.latex?P"> is the put price, <img src="https://latex.codecogs.com/png.latex?S_0"> is the current stock price, <img src="https://latex.codecogs.com/png.latex?K"> is the strike, <img src="https://latex.codecogs.com/png.latex?r"> is the risk-free rate, and <img src="https://latex.codecogs.com/png.latex?T"> is the time to expiration.</p>
+</section>
+<section id="deriving-it-from-no-arbitrage" class="level2">
+<h2 class="anchored" data-anchor-id="deriving-it-from-no-arbitrage">Deriving it from No-Arbitrage</h2>
+<p>The relationship follows directly from the no-arbitrage principle. Consider two portfolios: one holding a call and a bond, the other holding a put and the stock. Both portfolios have identical payoffs at expiration — so by no-arbitrage, they must have the same value today.</p>
+</section>
+<section id="implications" class="level2">
+<h2 class="anchored" data-anchor-id="implications">Implications</h2>
+<p>Put-call parity is model-free — it holds regardless of how we model the underlying. This makes it a powerful tool for detecting mispricing and for synthesising positions synthetically.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-hull2018" class="csl-entry">
+Hull, John C. 2018. <em>Options, Futures, and Other Derivatives</em>. 10th ed. Pearson.
+</div>
+<div id="ref-merton1973" class="csl-entry">
+Merton, Robert C. 1973. <span>“Theory of Rational Option Pricing.”</span> <em>The Bell Journal of Economics and Management Science</em> 4 (1): 141–83.
+</div>
+</div>
+<hr class="revision-divider">
+<details>
+<summary>
+Revision History
+</summary>
+<ul>
+<li>June 2026 — First published</li>
+</ul>
+</details>
+
+
+</section>
+
+ ]]></description>
+  <category>foundations</category>
+  <category>options</category>
+  <guid>https://danielobembe.github.io/stochastic-waltz/posts/foundations/put-call-parity/</guid>
+  <pubDate>Fri, 05 Jun 2026 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Introduction to Options</title>
+  <link>https://danielobembe.github.io/stochastic-waltz/posts/foundations/intro-to-options/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Options are among the most versatile instruments in modern finance. This post introduces the key concepts needed to understand how options work before we get into pricing theory.</p>
+<section id="what-is-an-option" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-an-option">What is an Option?</h2>
+<p>An option is a financial derivative that gives the holder the right, but not the obligation, to buy or sell an underlying asset at a specified price on or before a given date. The price paid for this right is called the <strong>premium</strong>.</p>
+</section>
+<section id="calls-and-puts" class="level2">
+<h2 class="anchored" data-anchor-id="calls-and-puts">Calls and Puts</h2>
+<p>There are two fundamental types of options:</p>
+<ul>
+<li>A <strong>call option</strong> gives the holder the right to <em>buy</em> the underlying at the strike price</li>
+<li>A <strong>put option</strong> gives the holder the right to <em>sell</em> the underlying at the strike price</li>
+</ul>
+<p>Each can be either bought (long) or sold (short), giving four basic positions.</p>
+</section>
+<section id="key-terminology" class="level2">
+<h2 class="anchored" data-anchor-id="key-terminology">Key Terminology</h2>
+<p>Before diving into pricing, it helps to be precise about the core vocabulary: the <strong>strike price</strong> <img src="https://latex.codecogs.com/png.latex?K">, the <strong>expiration date</strong> <img src="https://latex.codecogs.com/png.latex?T">, the <strong>underlying price</strong> <img src="https://latex.codecogs.com/png.latex?S_t">, and the <strong>risk-free rate</strong> <img src="https://latex.codecogs.com/png.latex?r">. These four quantities appear in virtually every options model we will encounter.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-black1973" class="csl-entry">
+Black, Fischer, and Myron Scholes. 1973. <span>“The Pricing of Options and Corporate Liabilities.”</span> <em>Journal of Political Economy</em> 81 (3): 637–54.
+</div>
+<div id="ref-hull2018" class="csl-entry">
+Hull, John C. 2018. <em>Options, Futures, and Other Derivatives</em>. 10th ed. Pearson.
+</div>
+</div>
+<hr class="revision-divider">
+<details>
+<summary>
+Revision History
+</summary>
+<ul>
+<li>June 2026 — First published</li>
+</ul>
+</details>
+
+
+</section>
+
+ ]]></description>
+  <category>foundations</category>
+  <category>options</category>
+  <guid>https://danielobembe.github.io/stochastic-waltz/posts/foundations/intro-to-options/</guid>
+  <pubDate>Mon, 01 Jun 2026 05:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

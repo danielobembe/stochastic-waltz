@@ -1,0 +1,316 @@
+[
+  {
+    "objectID": "posts/greeks-hedging/delta-hedging-vanilla-option/index.html",
+    "href": "posts/greeks-hedging/delta-hedging-vanilla-option/index.html",
+    "title": "Delta Hedging a Vanilla Option",
+    "section": "",
+    "text": "Delta hedging is the most fundamental risk management technique in options trading. By continuously adjusting a position in the underlying, a trader can eliminate first-order exposure to price movements.",
+    "crumbs": [
+      "About",
+      "Greeks & Hedging",
+      "Delta Hedging a Vanilla Option"
+    ]
+  },
+  {
+    "objectID": "posts/greeks-hedging/delta-hedging-vanilla-option/index.html#what-is-delta",
+    "href": "posts/greeks-hedging/delta-hedging-vanilla-option/index.html#what-is-delta",
+    "title": "Delta Hedging a Vanilla Option",
+    "section": "What is Delta?",
+    "text": "What is Delta?\nThe delta \\(\\Delta\\) of an option measures the sensitivity of the option’s price to a small change in the underlying asset price:\n\\[\\Delta = \\frac{\\partial V}{\\partial S}\\]\nFor a European call under Black-Scholes, \\(\\Delta = N(d_1)\\), where \\(N(\\cdot)\\) is the standard normal CDF.",
+    "crumbs": [
+      "About",
+      "Greeks & Hedging",
+      "Delta Hedging a Vanilla Option"
+    ]
+  },
+  {
+    "objectID": "posts/greeks-hedging/delta-hedging-vanilla-option/index.html#constructing-the-hedge",
+    "href": "posts/greeks-hedging/delta-hedging-vanilla-option/index.html#constructing-the-hedge",
+    "title": "Delta Hedging a Vanilla Option",
+    "section": "Constructing the Hedge",
+    "text": "Constructing the Hedge\nTo delta hedge a short call position, a trader buys \\(\\Delta\\) shares of the underlying. As \\(S\\) moves, \\(\\Delta\\) changes — so the hedge must be rebalanced continuously (in theory) or at discrete intervals (in practice).",
+    "crumbs": [
+      "About",
+      "Greeks & Hedging",
+      "Delta Hedging a Vanilla Option"
+    ]
+  },
+  {
+    "objectID": "posts/greeks-hedging/delta-hedging-vanilla-option/index.html#the-cost-of-hedging",
+    "href": "posts/greeks-hedging/delta-hedging-vanilla-option/index.html#the-cost-of-hedging",
+    "title": "Delta Hedging a Vanilla Option",
+    "section": "The Cost of Hedging",
+    "text": "The Cost of Hedging\nRebalancing is not free. The P&L of a delta-hedged position depends on the difference between realised volatility and implied volatility — a key insight that connects hedging to volatility trading.",
+    "crumbs": [
+      "About",
+      "Greeks & Hedging",
+      "Delta Hedging a Vanilla Option"
+    ]
+  },
+  {
+    "objectID": "posts/greeks-hedging/delta-hedging-vanilla-option/index.html#references",
+    "href": "posts/greeks-hedging/delta-hedging-vanilla-option/index.html#references",
+    "title": "Delta Hedging a Vanilla Option",
+    "section": "References",
+    "text": "References\n\n\nBlack, Fischer, and Myron Scholes. 1973. “The Pricing of Options and Corporate Liabilities.” Journal of Political Economy 81 (3): 637–54.\n\n\nHull, John C. 2018. Options, Futures, and Other Derivatives. 10th ed. Pearson.\n\n\n\n\n\nRevision History\n\n\nJune 2026 — First published",
+    "crumbs": [
+      "About",
+      "Greeks & Hedging",
+      "Delta Hedging a Vanilla Option"
+    ]
+  },
+  {
+    "objectID": "posts/foundations/intro-to-options/index.html",
+    "href": "posts/foundations/intro-to-options/index.html",
+    "title": "Introduction to Options",
+    "section": "",
+    "text": "Options are among the most versatile instruments in modern finance. This post introduces the key concepts needed to understand how options work before we get into pricing theory.",
+    "crumbs": [
+      "About",
+      "Foundations",
+      "Introduction to Options"
+    ]
+  },
+  {
+    "objectID": "posts/foundations/intro-to-options/index.html#what-is-an-option",
+    "href": "posts/foundations/intro-to-options/index.html#what-is-an-option",
+    "title": "Introduction to Options",
+    "section": "What is an Option?",
+    "text": "What is an Option?\nAn option is a financial derivative that gives the holder the right, but not the obligation, to buy or sell an underlying asset at a specified price on or before a given date. The price paid for this right is called the premium.",
+    "crumbs": [
+      "About",
+      "Foundations",
+      "Introduction to Options"
+    ]
+  },
+  {
+    "objectID": "posts/foundations/intro-to-options/index.html#calls-and-puts",
+    "href": "posts/foundations/intro-to-options/index.html#calls-and-puts",
+    "title": "Introduction to Options",
+    "section": "Calls and Puts",
+    "text": "Calls and Puts\nThere are two fundamental types of options:\n\nA call option gives the holder the right to buy the underlying at the strike price\nA put option gives the holder the right to sell the underlying at the strike price\n\nEach can be either bought (long) or sold (short), giving four basic positions.",
+    "crumbs": [
+      "About",
+      "Foundations",
+      "Introduction to Options"
+    ]
+  },
+  {
+    "objectID": "posts/foundations/intro-to-options/index.html#key-terminology",
+    "href": "posts/foundations/intro-to-options/index.html#key-terminology",
+    "title": "Introduction to Options",
+    "section": "Key Terminology",
+    "text": "Key Terminology\nBefore diving into pricing, it helps to be precise about the core vocabulary: the strike price \\(K\\), the expiration date \\(T\\), the underlying price \\(S_t\\), and the risk-free rate \\(r\\). These four quantities appear in virtually every options model we will encounter.",
+    "crumbs": [
+      "About",
+      "Foundations",
+      "Introduction to Options"
+    ]
+  },
+  {
+    "objectID": "posts/foundations/intro-to-options/index.html#references",
+    "href": "posts/foundations/intro-to-options/index.html#references",
+    "title": "Introduction to Options",
+    "section": "References",
+    "text": "References\n\n\nBlack, Fischer, and Myron Scholes. 1973. “The Pricing of Options and Corporate Liabilities.” Journal of Political Economy 81 (3): 637–54.\n\n\nHull, John C. 2018. Options, Futures, and Other Derivatives. 10th ed. Pearson.\n\n\n\n\n\nRevision History\n\n\nJune 2026 — First published",
+    "crumbs": [
+      "About",
+      "Foundations",
+      "Introduction to Options"
+    ]
+  },
+  {
+    "objectID": "posts/algorithmic-trading/backtesting-a-strategy/index.html",
+    "href": "posts/algorithmic-trading/backtesting-a-strategy/index.html",
+    "title": "Backtesting a Strategy",
+    "section": "",
+    "text": "Backtesting is the process of simulating a trading strategy on historical data to evaluate its performance. Done carefully, it provides a useful signal about whether a strategy has merit — done carelessly, it produces misleading results.",
+    "crumbs": [
+      "About",
+      "Algorithmic Trading",
+      "Backtesting a Strategy"
+    ]
+  },
+  {
+    "objectID": "posts/algorithmic-trading/backtesting-a-strategy/index.html#the-basic-setup",
+    "href": "posts/algorithmic-trading/backtesting-a-strategy/index.html#the-basic-setup",
+    "title": "Backtesting a Strategy",
+    "section": "The Basic Setup",
+    "text": "The Basic Setup\nA backtest requires three components: a signal (when to trade), a sizing rule (how much to trade), and a cost model (what execution costs). Getting all three right matters — an impressive backtest with no transaction costs tells you very little.",
+    "crumbs": [
+      "About",
+      "Algorithmic Trading",
+      "Backtesting a Strategy"
+    ]
+  },
+  {
+    "objectID": "posts/algorithmic-trading/backtesting-a-strategy/index.html#common-pitfalls",
+    "href": "posts/algorithmic-trading/backtesting-a-strategy/index.html#common-pitfalls",
+    "title": "Backtesting a Strategy",
+    "section": "Common Pitfalls",
+    "text": "Common Pitfalls\nThe most dangerous backtesting mistakes are look-ahead bias (using future information that wouldn’t have been available at the time) and overfitting (tuning parameters until the in-sample performance looks good, at the expense of out-of-sample validity).",
+    "crumbs": [
+      "About",
+      "Algorithmic Trading",
+      "Backtesting a Strategy"
+    ]
+  },
+  {
+    "objectID": "posts/algorithmic-trading/backtesting-a-strategy/index.html#evaluation-metrics",
+    "href": "posts/algorithmic-trading/backtesting-a-strategy/index.html#evaluation-metrics",
+    "title": "Backtesting a Strategy",
+    "section": "Evaluation Metrics",
+    "text": "Evaluation Metrics\nRaw return is a poor measure of strategy quality. Better metrics include the Sharpe ratio, maximum drawdown, and the Calmar ratio — each capturing a different dimension of risk-adjusted performance.",
+    "crumbs": [
+      "About",
+      "Algorithmic Trading",
+      "Backtesting a Strategy"
+    ]
+  },
+  {
+    "objectID": "posts/algorithmic-trading/backtesting-a-strategy/index.html#references",
+    "href": "posts/algorithmic-trading/backtesting-a-strategy/index.html#references",
+    "title": "Backtesting a Strategy",
+    "section": "References",
+    "text": "References\n\n\nBailey, David H., Jonathan Borwein, Marcos Lopez de Prado, and Qiji Jim Zhu. 2014. “Pseudo-Mathematics and Financial Charlatanism: The Effects of Backtest Overfitting on Out-of-Sample Performance.” Notices of the American Mathematical Society 61 (5): 458–71.\n\n\nSharpe, William F. 1966. “Mutual Fund Performance.” Journal of Business 39 (1): 119–38.\n\n\n\n\n\nRevision History\n\n\nJune 2026 — First published",
+    "crumbs": [
+      "About",
+      "Algorithmic Trading",
+      "Backtesting a Strategy"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About me",
+    "section": "",
+    "text": "I’m Ayo, a quantitative finance practitioner with a focus on derivatives pricing, volatility modelling, and systematic trading strategies.\nThis blog is a working record of ideas I find worth writing down carefully. The posts are meant to be rigorous without being impenetrable — the kind of writing I wished existed when I was first learning these topics. Each post is part reference material, part worked example, and part thinking out loud.\nThe areas I return to most often are options theory, stochastic volatility, and the intersection of statistical inference with trading. Expect equations, code, and occasional digressions into market structure."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Stochastic Waltz",
+    "section": "",
+    "text": "Backtesting a Strategy\n\n\n\nalgorithmic-trading\n\n\n\nA quick intro to running backtests on algorithmic strategies.\n\n\n\n\n\nJun 18, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nDelta Hedging a Vanilla Option\n\n\n\ngreeks-hedging\n\n\n\nAn introduction to delta hedging and how it eliminates first-order directional risk.\n\n\n\n\n\nJun 18, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nVolatility Targeting\n\n\n\nalgorithmic-trading\n\nvolatility\n\n\n\nHow volatility targeting strategies dynamically scale position sizes to maintain a constant level of portfolio risk.\n\n\n\n\n\nJun 10, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nPut-Call Parity\n\n\n\nfoundations\n\noptions\n\n\n\nDeriving the put-call parity relationship and exploring its implications for options pricing and arbitrage.\n\n\n\n\n\nJun 5, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to Options\n\n\n\nfoundations\n\noptions\n\n\n\nA primer on options contracts — what they are, how they work, and why they matter to quantitative finance.\n\n\n\n\n\nJun 1, 2026\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/algorithmic-trading/volatility-targeting/index.html",
+    "href": "posts/algorithmic-trading/volatility-targeting/index.html",
+    "title": "Volatility Targeting",
+    "section": "",
+    "text": "Volatility targeting is a position sizing technique that adjusts exposure inversely to realised volatility, keeping portfolio risk approximately constant through time.",
+    "crumbs": [
+      "About",
+      "Algorithmic Trading",
+      "Volatility Targeting"
+    ]
+  },
+  {
+    "objectID": "posts/algorithmic-trading/volatility-targeting/index.html#the-core-idea",
+    "href": "posts/algorithmic-trading/volatility-targeting/index.html#the-core-idea",
+    "title": "Volatility Targeting",
+    "section": "The Core Idea",
+    "text": "The Core Idea\nRather than holding a fixed number of shares or a fixed notional position, a volatility-targeted strategy scales its position so that the expected portfolio volatility equals a target level \\(\\sigma^*\\):\n\\[w_t = \\frac{\\sigma^*}{\\hat{\\sigma}_t}\\]\nwhere \\(\\hat{\\sigma}_t\\) is an estimate of current volatility, typically a rolling standard deviation of recent returns.",
+    "crumbs": [
+      "About",
+      "Algorithmic Trading",
+      "Volatility Targeting"
+    ]
+  },
+  {
+    "objectID": "posts/algorithmic-trading/volatility-targeting/index.html#why-it-works",
+    "href": "posts/algorithmic-trading/volatility-targeting/index.html#why-it-works",
+    "title": "Volatility Targeting",
+    "section": "Why It Works",
+    "text": "Why It Works\nVolatility is mean-reverting and persistent. When markets are calm, vol targeting increases exposure; when markets are turbulent, it reduces it. This creates a natural mechanism for cutting risk during drawdowns — often before stop-losses would trigger.",
+    "crumbs": [
+      "About",
+      "Algorithmic Trading",
+      "Volatility Targeting"
+    ]
+  },
+  {
+    "objectID": "posts/algorithmic-trading/volatility-targeting/index.html#practical-considerations",
+    "href": "posts/algorithmic-trading/volatility-targeting/index.html#practical-considerations",
+    "title": "Volatility Targeting",
+    "section": "Practical Considerations",
+    "text": "Practical Considerations\nThe choice of lookback window for \\(\\hat{\\sigma}_t\\) matters significantly. Short windows are more responsive but noisier; long windows are more stable but lag regime changes. Transaction costs must also be weighed against the benefits of frequent rebalancing.",
+    "crumbs": [
+      "About",
+      "Algorithmic Trading",
+      "Volatility Targeting"
+    ]
+  },
+  {
+    "objectID": "posts/algorithmic-trading/volatility-targeting/index.html#references",
+    "href": "posts/algorithmic-trading/volatility-targeting/index.html#references",
+    "title": "Volatility Targeting",
+    "section": "References",
+    "text": "References\n\n\nHurst, Brian, Yao Hua Ooi, and Lasse Heje Pedersen. 2013. “Demystifying Managed Futures.” Journal of Investment Management 11 (3): 42–58.\n\n\nMoreira, Alan, and Tyler Muir. 2017. “Volatility-Managed Portfolios.” Journal of Finance 72 (4): 1611–44.\n\n\n\n\n\nRevision History\n\n\nJune 2026 — First published",
+    "crumbs": [
+      "About",
+      "Algorithmic Trading",
+      "Volatility Targeting"
+    ]
+  },
+  {
+    "objectID": "posts/foundations/put-call-parity/index.html",
+    "href": "posts/foundations/put-call-parity/index.html",
+    "title": "Put-Call Parity",
+    "section": "",
+    "text": "Put-call parity is one of the most elegant results in options theory. It establishes a precise relationship between the prices of European calls and puts on the same underlying, with the same strike and expiration.",
+    "crumbs": [
+      "About",
+      "Foundations",
+      "Put-Call Parity"
+    ]
+  },
+  {
+    "objectID": "posts/foundations/put-call-parity/index.html#the-relationship",
+    "href": "posts/foundations/put-call-parity/index.html#the-relationship",
+    "title": "Put-Call Parity",
+    "section": "The Relationship",
+    "text": "The Relationship\nFor European options on a non-dividend-paying stock, put-call parity states:\n\\[C - P = S_0 - K e^{-rT}\\]\nwhere \\(C\\) is the call price, \\(P\\) is the put price, \\(S_0\\) is the current stock price, \\(K\\) is the strike, \\(r\\) is the risk-free rate, and \\(T\\) is the time to expiration.",
+    "crumbs": [
+      "About",
+      "Foundations",
+      "Put-Call Parity"
+    ]
+  },
+  {
+    "objectID": "posts/foundations/put-call-parity/index.html#deriving-it-from-no-arbitrage",
+    "href": "posts/foundations/put-call-parity/index.html#deriving-it-from-no-arbitrage",
+    "title": "Put-Call Parity",
+    "section": "Deriving it from No-Arbitrage",
+    "text": "Deriving it from No-Arbitrage\nThe relationship follows directly from the no-arbitrage principle. Consider two portfolios: one holding a call and a bond, the other holding a put and the stock. Both portfolios have identical payoffs at expiration — so by no-arbitrage, they must have the same value today.",
+    "crumbs": [
+      "About",
+      "Foundations",
+      "Put-Call Parity"
+    ]
+  },
+  {
+    "objectID": "posts/foundations/put-call-parity/index.html#implications",
+    "href": "posts/foundations/put-call-parity/index.html#implications",
+    "title": "Put-Call Parity",
+    "section": "Implications",
+    "text": "Implications\nPut-call parity is model-free — it holds regardless of how we model the underlying. This makes it a powerful tool for detecting mispricing and for synthesising positions synthetically.",
+    "crumbs": [
+      "About",
+      "Foundations",
+      "Put-Call Parity"
+    ]
+  },
+  {
+    "objectID": "posts/foundations/put-call-parity/index.html#references",
+    "href": "posts/foundations/put-call-parity/index.html#references",
+    "title": "Put-Call Parity",
+    "section": "References",
+    "text": "References\n\n\nHull, John C. 2018. Options, Futures, and Other Derivatives. 10th ed. Pearson.\n\n\nMerton, Robert C. 1973. “Theory of Rational Option Pricing.” The Bell Journal of Economics and Management Science 4 (1): 141–83.\n\n\n\n\n\nRevision History\n\n\nJune 2026 — First published",
+    "crumbs": [
+      "About",
+      "Foundations",
+      "Put-Call Parity"
+    ]
+  }
+]
