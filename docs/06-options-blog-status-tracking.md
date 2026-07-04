@@ -126,18 +126,27 @@ A running log of what was planned, what was actually built, decisions made, and 
 
 ### Outstanding items (Phase 4)
 
-- **Task 1 — Plausible Analytics**: Deferred to post-Phase 6 — requires the live site URL, which is only confirmed after deployment
-- **Task 2 — visitorbadge.io**: Deferred to post-Phase 6 — same reason as above
+- None — remaining domain-dependent tasks (Plausible Analytics, visitorbadge.io) moved to the new Phase 5 (see below)
+
+### Plan restructuring note
+
+- **Development Plan restructured (3 July 2026)**: "Publish to GitHub Pages" pulled out of the old Phase 6 (Launch) and promoted to its own **Phase 5 — Deploy to GitHub Pages**, sequenced before First Content. Reasoning: (1) gives a visible progress milestone before content-writing begins, (2) confirms the live site URL early, which unblocks Plausible Analytics and visitorbadge.io — both of which require a live domain and were previously stuck waiting until the very end of the project. These two tasks moved from Phase 4 into the new Phase 5. Old Phase 5 (First Content) renumbered to Phase 6; old Phase 6 (Launch) renumbered to Phase 7 and now only covers pre-launch checklist, re-publishing with real content, Quantocracy submission, sharing, and monitoring. Flagged: the site will go live in Phase 5 with placeholder/toy posts still in place — acceptable since the repo isn't being promoted yet.
 
 ---
 
-## Phase 5 — First Content
+## Phase 5 — Deploy to GitHub Pages
 
 **Status:** Not started
 
 ---
 
-## Phase 6 — Launch
+## Phase 6 — First Content
+
+**Status:** Not started
+
+---
+
+## Phase 7 — Launch
 
 **Status:** Not started
 

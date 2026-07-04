@@ -33,7 +33,7 @@ Supporting documents — read in this order after this brief:
 
 1. **Design Brief** — visual design, layout, typography, color palette, information architecture
 2. **Technical Specification** — hosting, analytics, comments, RSS, email, SEO, performance
-3. **Development Plan** — the six-phase build sequence, tasks, and definitions of done
+3. **Development Plan** — the seven-phase build sequence, tasks, and definitions of done
 4. **File & Folder Structure** — the complete project file tree, naming conventions, and URL structure
 
 ---
@@ -56,9 +56,10 @@ Supporting documents — read in this order after this brief:
 | Phase 1 | Environment Setup | Complete |
 | Phase 2 | Design Implementation | Complete |
 | Phase 3 | Structure & Navigation | Complete |
-| Phase 4 | Third-Party Integrations | Not started |
-| Phase 5 | First Content | Not started |
-| Phase 6 | Launch | Not started |
+| Phase 4 | Third-Party Integrations | In progress |
+| Phase 5 | Deploy to GitHub Pages | Not started |
+| Phase 6 | First Content | Not started |
+| Phase 7 | Launch | Not started |
 
 ---
 

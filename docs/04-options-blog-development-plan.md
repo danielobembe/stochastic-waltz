@@ -169,60 +169,80 @@ The plan is written to be handed directly to Claude Code. Where decisions have a
 
 ## Phase 4 — Third-Party Integrations
 
-**Goal:** All services from the Technical Specification are wired up and verified.
+**Goal:** All services from the Technical Specification that do not depend on a live site URL are wired up and verified locally. (Plausible Analytics and visitorbadge.io are domain-dependent and have been moved to Phase 5 — Deploy to GitHub Pages.)
 
 ### Tasks
 
-1. **Plausible Analytics** ⚠️ *Deferred to post-Phase 6 — requires live site URL*
-   - Create account at plausible.io and add the site domain
-   - Embed the Plausible script tag in `_quarto.yml` under `include-in-header`
-   - Verify pageview events appear in the Plausible dashboard after a test visit
-   - *Note: the tracking script is domain-specific — complete this after the site is deployed and the live URL is confirmed*
-
-2. **visitorbadge.io** ⚠️ *Deferred to post-Phase 6 — requires live site URL*
-   - Register the homepage URL at visitorbadge.io
-   - Embed the generated badge on the homepage
-   - Customize badge colors to match the site palette (muted, no red/pink)
-   - *Note: the badge is tied to a specific page URL — complete this after deployment*
-
-3. **Giscus comments**
+1. **Giscus comments**
    - Enable GitHub Discussions on the repository
    - Install the Giscus GitHub App at giscus.app
    - Generate the embed script and add it to the article template
    - Verify comments render in both light and dark mode
    - Verify the comment section appears below the revision history and above the footer on article pages only
 
-4. **RSS Feed**
+2. **RSS Feed**
    - Configure the feed in `_quarto.yml` (20 items, full type)
    - Verify the feed renders correctly at `/index.xml`
    - Add RSS feed link to the site footer
 
-5. **Buttondown email subscriptions**
+3. **Buttondown email subscriptions**
    - Create account at buttondown.com
    - Configure RSS-to-email so new posts trigger automatic notifications
    - Embed the minimal subscription form (email field only) in the site footer
    - Verify the footer copy reads: *"New posts by email — no spam, unsubscribe anytime."*
    - Verify no subscription prompt appears anywhere except the footer and About page
 
-6. **Open Graph / SEO**
+4. **Open Graph / SEO**
    - Configure global Open Graph tags in `_quarto.yml` (title, description, default image)
    - Create a default OG image (`/assets/og-default.png`) in the site's color palette
    - Verify a test post's Open Graph tags render correctly using the [Open Graph debugger](https://developers.facebook.com/tools/debug/)
 
-7. **Privacy notice**
+5. **Privacy notice**
    - Add a one-paragraph privacy notice to the site footer
    - Content: note that Plausible analytics are in use, no personal data is collected passively
 
 ### Definition of Done
-- All six integrations are live and verified
-- Plausible is recording visits
+- Giscus, RSS, Buttondown, Open Graph, and the privacy notice are all wired up and verified locally
 - A test comment can be posted and displayed via Giscus
 - The RSS feed validates correctly
 - A test email subscription and delivery works end-to-end
 
 ---
 
-## Phase 5 — First Content
+## Phase 5 — Deploy to GitHub Pages
+
+**Goal:** The site is live on GitHub Pages at its permanent URL. This is deliberately sequenced before writing real content — it surfaces deployment issues early, provides a visible progress milestone, and confirms the live URL needed for the two domain-dependent integrations deferred from Phase 4.
+
+> **Note:** The site will go live with the current placeholder/toy posts still in place. This is expected — Phase 6 replaces them with real content, and Phase 7 re-publishes before public launch.
+
+### Tasks
+
+1. **Publish to GitHub Pages**
+   ```bash
+   quarto publish gh-pages
+   ```
+   - Verify the live site at `https://<username>.github.io/<repository-name>/`
+   - Confirm all pages, assets, and Phase 4 integrations (Giscus, RSS, Buttondown, Open Graph) work correctly on the live URL, not just locally
+
+2. **Plausible Analytics**
+   - Create account at plausible.io and register the confirmed live URL
+   - Embed the Plausible script tag in `_quarto.yml` under `include-in-header`
+   - Verify pageview events appear in the Plausible dashboard after a test visit
+
+3. **visitorbadge.io**
+   - Register the live homepage URL at visitorbadge.io
+   - Embed the generated badge on the homepage
+   - Customize badge colors to match the site palette (muted, no red/pink)
+
+### Definition of Done
+- The site is publicly accessible at the GitHub Pages URL
+- All Phase 4 integrations are confirmed working on the live site
+- Plausible is recording visits
+- The visitorbadge.io badge is live on the homepage
+
+---
+
+## Phase 6 — First Content
 
 **Goal:** Two real posts are written, rendered correctly, and look exactly as intended. All content elements — equations, code, plots, and interactive figures — are verified in context.
 
@@ -262,9 +282,9 @@ The plan is written to be handed directly to Claude Code. Where decisions have a
 
 ---
 
-## Phase 6 — Launch
+## Phase 7 — Launch
 
-**Goal:** The site is live on GitHub Pages and has been shared with the first communities.
+**Goal:** Real content (from Phase 6) replaces the placeholder posts on the live site, and the blog has been shared with the first communities.
 
 ### Tasks
 
@@ -277,23 +297,18 @@ The plan is written to be handed directly to Claude Code. Where decisions have a
    - [ ] RSS feed validates at `/index.xml`
    - [ ] Giscus comments confirmed working
    - [ ] Buttondown subscription confirmed working
-   - [ ] Plausible tracking confirmed live (set up after deployment)
-   - [ ] visitorbadge.io badge confirmed live (set up after deployment)
+   - [ ] Plausible tracking confirmed live
+   - [ ] visitorbadge.io badge confirmed live
    - [ ] Site renders correctly at all three breakpoints
    - [ ] Light and dark modes both confirmed
 
-2. **Publish to GitHub Pages**
+2. **Re-publish to GitHub Pages**
    ```bash
    quarto publish gh-pages
    ```
-   - Verify the live site at `https://<username>.github.io/<repository-name>/`
-   - Confirm all pages, assets, and integrations work on the live URL (not just locally)
+   - Verify the live site now reflects the real content from Phase 6, replacing the placeholder posts deployed in Phase 5
 
-3. **Set up domain-dependent integrations**
-   - **Plausible Analytics**: create account at plausible.io, register the confirmed live URL, embed the script tag in `_quarto.yml`
-   - **visitorbadge.io**: register the live homepage URL, embed the generated badge on the homepage
-
-4. **Submit to Quantocracy**
+3. **Submit to Quantocracy**
    - Submit the blog URL at [quantocracy.com/submit](https://quantocracy.com/submit)
    - Quantocracy is the primary aggregator for quant finance content; inclusion here is the single highest-value distribution action at launch
 
@@ -308,7 +323,7 @@ The plan is written to be handed directly to Claude Code. Where decisions have a
    - Note any rendering issues reported or observed on the live site
 
 ### Definition of Done
-- The site is publicly accessible at the GitHub Pages URL
+- The live site reflects real, final content — no placeholders remain
 - Both posts are live and rendering correctly
 - The site has been submitted to Quantocracy
 - No critical issues observed in the first 48 hours
