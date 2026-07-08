@@ -331,6 +331,48 @@ The plan is written to be handed directly to Claude Code. Where decisions have a
 
 ---
 
+## Phase 8 — Custom Domain Migration
+
+**Goal:** Migrate the site from the default `github.io` URL to a custom domain, giving full control over caching behavior (via a CDN like Cloudflare) and a more permanent, professional URL. Deliberately scheduled after launch and a few real posts, once the blog has enough content and traffic to justify the migration effort.
+
+> **Motivation:** During Phase 5, repeated hard-refreshes were needed to see deployment changes on the live site — an inherent limitation of GitHub Pages' default CDN (Fastly), which caches `index.html` and other non-fingerprinted pages for a period with no way to configure custom cache headers. A custom domain fronted by a CDN you control (e.g. Cloudflare) solves this by giving you manual cache-purge capability.
+
+### Tasks
+
+1. **Register a domain**
+   - Register with any registrar (~$12/year for a `.com`)
+
+2. **Configure GitHub Pages for the custom domain**
+   - Add a `CNAME` file to the repository root containing the custom domain
+   - Configure DNS: add `A` records pointing to GitHub Pages' IPs (for an apex domain), or a `CNAME` record (for a `www` subdomain)
+   - Enable "Enforce HTTPS" in the GitHub Pages repository settings (GitHub auto-provisions HTTPS via Let's Encrypt)
+
+3. **Add a CDN for cache control**
+   - Put the custom domain behind a CDN you control (e.g. Cloudflare, free tier)
+   - Verify manual cache purge works — this directly addresses the Phase 5 caching friction
+
+4. **Update site configuration**
+   - Update `site-url` in `_quarto.yml` to the new domain
+   - Verify Open Graph tags reflect the new URL
+   - Re-publish: `quarto publish gh-pages`
+
+5. **Update domain-dependent integrations**
+   - Update Plausible dashboard to track the new domain (if set up by this point)
+   - Update visitorbadge.io badge URL to the new domain
+   - Verify Giscus configuration still works (references the GitHub repo, not the domain — should be unaffected, but confirm)
+
+6. **Verify the migration**
+   - Confirm the old `github.io` URL redirects correctly to the new domain (GitHub Pages handles this automatically for the root)
+   - Confirm all pages, assets, and integrations work correctly on the new domain
+
+### Definition of Done
+- The site is live and publicly accessible at the custom domain with HTTPS enforced
+- The CDN cache can be manually purged, resolving the Phase 5 caching delay
+- All domain-dependent integrations (Plausible, visitorbadge.io, Open Graph, `site-url`) point to the new domain
+- The old GitHub Pages URL redirects correctly
+
+---
+
 ## Appendix: Ongoing Workflow (Post-Launch)
 
 For each new post after launch, the standard workflow is:

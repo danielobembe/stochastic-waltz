@@ -168,4 +168,14 @@ A running log of what was planned, what was actually built, decisions made, and 
 
 ---
 
+## Phase 8 — Custom Domain Migration
+
+**Status:** Not started
+
+### Notes
+
+- **New phase added (7 July 2026)**: Previously, custom domain migration was only documented as a "Future" note in the Technical Spec (Section 3) and a checklist (Section 12), not scheduled into the Development Plan. Promoted to its own Phase 8 after Ayo determined it was important enough to explicitly plan for, following recurring GitHub Pages CDN caching friction encountered during Phase 5 (repeated hard-refreshes needed to see deployed changes). Ayo intends to tackle this after Phase 7 (Launch) and publishing a few real articles — not immediately.
+
+---
+
 *End of Status Tracking*
