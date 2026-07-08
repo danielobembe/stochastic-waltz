@@ -250,6 +250,10 @@ div#refs {
 }
 
 /* ── Visitor Badge ────────────────────────────────────────── */
+.quarto-sidebar-footer {
+  margin-top: auto;
+}
+
 .quarto-sidebar-footer .visitor-badge {
   display: flex;
   justify-content: flex-start;
