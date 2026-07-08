@@ -18,6 +18,7 @@ A running list of features or service tiers deliberately deferred due to cost, l
 | Service | Current tier | What upgrading unlocks | Revisit when |
 |---|---|---|---|
 | Buttondown | Free | RSS-to-email (Basic, ~$9/month) — automatic emails to subscribers when a new post is published | Subscriber count becomes meaningful enough that manual sending is a burden |
+| Plausible Analytics | Not set up | Private, privacy-respecting analytics (~$9/month after trial) — page views, unique visitors, referrer sources, top pages | Ayo wants visibility into traffic/referrer sources, or has enough real content/promotion activity that analytics would be informative |
 
 ---
 

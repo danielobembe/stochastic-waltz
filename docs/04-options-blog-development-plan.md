@@ -224,10 +224,11 @@ The plan is written to be handed directly to Claude Code. Where decisions have a
    - Verify the live site at `https://<username>.github.io/<repository-name>/`
    - Confirm all pages, assets, and Phase 4 integrations (Giscus, RSS, Buttondown, Open Graph) work correctly on the live URL, not just locally
 
-2. **Plausible Analytics**
+2. **Plausible Analytics** ⚠️ *Deferred — see `docs/07-options-blog-future-upgrades.md`*
    - Create account at plausible.io and register the confirmed live URL
    - Embed the Plausible script tag in `_quarto.yml` under `include-in-header`
    - Verify pageview events appear in the Plausible dashboard after a test visit
+   - *Note: parked for now — not needed until there's more real content/traffic to analyze*
 
 3. **visitorbadge.io**
    - Register the live homepage URL at visitorbadge.io
@@ -237,8 +238,8 @@ The plan is written to be handed directly to Claude Code. Where decisions have a
 ### Definition of Done
 - The site is publicly accessible at the GitHub Pages URL
 - All Phase 4 integrations are confirmed working on the live site
-- Plausible is recording visits
 - The visitorbadge.io badge is live on the homepage
+- *(Plausible Analytics deferred — not required for Phase 5 completion; see `docs/07-options-blog-future-upgrades.md`)*
 
 ---
 

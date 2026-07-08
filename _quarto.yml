@@ -34,6 +34,10 @@ website:
     toggle: true
   sidebar:
     style: "docked"
+    footer: |
+      ::: {.visitor-badge}
+      ![](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fdanielobembe.github.io%2Fstochastic-waltz&countColor=%23263759)
+      :::
     contents:
       - section: "Foundations"
         contents:

@@ -103,10 +103,9 @@ A running log of what was planned, what was actually built, decisions made, and 
 
 ---
 
-## Phase 4 — Third-Party Integrations
+## Phase 4 — Third-Party Integrations ✅
 
-**Status:** In progress  
-**Last updated:** 3 July 2026
+**Completed:** 3 July 2026
 
 ### What was done
 
@@ -134,25 +133,26 @@ A running log of what was planned, what was actually built, decisions made, and 
 
 ---
 
-## Phase 5 — Deploy to GitHub Pages
+## Phase 5 — Deploy to GitHub Pages ✅
 
-**Status:** In progress  
-**Last updated:** 3 July 2026
+**Completed:** 7 July 2026
 
 ### What was done
 
 - **Task 1 (Publish to GitHub Pages)**: `gh-pages` branch did not exist on the remote, causing `quarto publish gh-pages` to fail with a misleading "initialize the remote repository" error even after the first attempt. Fixed by manually creating an empty orphan `gh-pages` branch and pushing it, then re-running the publish command, which succeeded
 - Site confirmed live at `https://danielobembe.github.io/stochastic-waltz`
 - **Sidebar hover bug found and fixed post-deploy**: empty sidebar sections (no subpages, e.g. "Volatility Models") render as a plain `<span class="sidebar-item-text">` rather than an `<a>` tag, so the existing `.sidebar-item a:hover` CSS rule never applied to them — they didn't turn blue on hover like sections with subpages. Fixed by broadening the selector to `.sidebar-item-text:hover`, which covers both `<a>` and `<span>` elements. Re-published to `gh-pages` after the fix
+- **Task 3 (visitorbadge.io)**: Badge registered for `https://danielobembe.github.io/stochastic-waltz`; embedded via Quarto's `website.sidebar.footer` key in `_quarto.yml`, which renders at the bottom of the left sidebar nav (above the page footer) on every page that has a sidebar. Since the About page sets `sidebar: false`, a second instance was added directly in `about.qmd`, centered below the LinkedIn/GitHub links. Badge color (`#263759`, dark navy) already met the "muted, no red/pink" requirement out of the box
 
 ### Decisions made
 
 - **First-publish fix**: Manually creating an orphan `gh-pages` branch is a one-time workaround for this Quarto version's first-publish behavior when the branch doesn't already exist remotely — not needed for subsequent publishes
+- **Plausible Analytics deferred (7 July 2026)**: Not needed yet — the blog has no real content or traffic to analyze, so private analytics has no immediate value. Tracked in `docs/07-options-blog-future-upgrades.md`; Development Plan Phase 5 Task 2 and Definition of Done updated to reflect it's no longer required for Phase 5 completion
+- **Visitor badge placement**: Sidebar footer (not homepage body) — keeps it visible site-wide rather than homepage-only, and sits naturally above the page footer without disrupting the post feed layout. Confirmed the built-in preview pane fails to load the badge image (likely a webview/CSP restriction); it loads correctly in a real browser and in the rendered `_site` files opened directly — consistent with the earlier About page multi-click preview quirk
 
 ### Outstanding items (Phase 5)
 
-- **Task 2 — Plausible Analytics**: Not yet started — requires plausible.io account creation
-- **Task 3 — visitorbadge.io**: Not yet started — requires visitorbadge.io registration
+- None — Plausible deferred (see above), visitorbadge.io complete. Phase 5 is functionally done pending final review
 
 ---
 
